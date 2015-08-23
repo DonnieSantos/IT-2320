@@ -1,0 +1,20 @@
+.grid
+{
+    display: table;
+    border: 1px solid black;
+}
+
+.grid > .row > .cell
+{
+    display: inline-block;
+    border: 1px solid black;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    padding: 15px 10px 0px 10px;
+}
+
+.grid > .row > .active
+{
+    background-color: red;
+}
