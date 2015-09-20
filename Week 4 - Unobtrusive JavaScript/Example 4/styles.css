@@ -1,0 +1,12 @@
+.cell
+{
+	background-color: white;
+}
+
+.spreadsheet .row .first-name, .spreadsheet .row .last-name
+{
+	background-color: white;
+	display: inline-block;
+	border: 1px solid black;
+	width: 100px;
+}
