@@ -1,0 +1,36 @@
+﻿.home > .board
+{
+    display: table;
+    border: 1px solid black;
+}
+
+.home > .board > .row
+{
+    display: table;
+}
+
+.home > .board > .row > .cell
+{
+    width: 80px;
+    height: 80px;
+    border: 1px solid black;
+    display: inline-block;
+}
+
+.piece
+{
+    background-size: 75px 75px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-origin: content-box;
+}
+
+.red
+{
+    background-image: URL('../images/red.png');
+}
+
+.black
+{
+    background-image: URL('../images/black.png');
+}

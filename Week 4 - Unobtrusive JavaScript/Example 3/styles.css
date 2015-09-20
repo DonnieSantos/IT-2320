@@ -1,0 +1,36 @@
+.board
+{
+	border: 2px solid red;
+	height: 170px;
+	width: 170px;
+	padding: 5px;
+}
+
+.board .row .piece-empty
+{
+	display: inline-block;
+	border: 2px solid black;
+	height: 50px;
+	width: 50px;
+	background-repeat: no-repeat;
+}
+
+.board .row .piece-x
+{
+	display: inline-block;
+	border: 2px solid black;
+	height: 50px;
+	width: 50px;
+	background-image: url("piece-x.png");
+	background-repeat: no-repeat;
+}
+
+.board .row .piece-o
+{
+	display: inline-block;
+	border: 2px solid black;
+	height: 50px;
+	width: 50px;
+	background-image: url("piece-o.png");
+	background-repeat: no-repeat;
+}

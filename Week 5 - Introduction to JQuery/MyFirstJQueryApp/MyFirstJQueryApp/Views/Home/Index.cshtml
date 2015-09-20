@@ -1,0 +1,39 @@
+﻿@model MyFirstJQueryApp.Models.HomeModel
+
+<html>
+
+    <head>
+        <title>@Model.Title</title>
+        <link href="~/Styles/Home.css" rel="stylesheet" />
+    </head>
+
+    <body>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+        <script src="~/Scripts/Home.js"></script>
+        <script type="text/javascript">Home.Title = "@Model.Title";</script>
+
+        <div class="home">
+
+            <h2>@Model.Title</h2>
+
+            <div class="container">
+                <div class="click-me"></div>
+                <div class="hide-me"></div>
+                <div class="fade-me"></div>
+                <div class="drag-me"></div>
+            </div>
+
+            <div class="container">
+                <div class="animate-me"></div>
+            </div>
+
+            <div class="container">
+                <div class="chain-me"></div>
+            </div>
+
+        </div>
+
+    </body>
+
+</html>

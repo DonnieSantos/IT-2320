@@ -1,0 +1,78 @@
+﻿.home .container
+{
+    border: 1px solid black;
+    width: 500px;
+    height: 200px;
+}
+
+.home .click-me
+{
+    top: 10px;
+    left: 10px;
+    background-color: lime;
+    position: relative;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    z-index: 1;
+}
+
+.home .drag-me
+{
+    top: 10px;
+    left: 10px;
+    background-color: blue;
+    position: relative;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    z-index: 2;
+}
+
+.home .hide-me
+{
+    top: 10px;
+    left: 10px;
+    background-color: purple;
+    position: relative;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    z-index: 1;
+}
+
+.home .fade-me
+{
+    top: 10px;
+    left: 10px;
+    background-color: black;
+    position: relative;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    z-index: 1;
+}
+
+.home .animate-me
+{
+    top: 10px;
+    left: 10px;
+    background-color: orange;
+    position: relative;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    z-index: 1;
+}
+
+.home .chain-me
+{
+    top: 10px;
+    left: 10px;
+    background-color: yellow;
+    position: relative;
+    display: inline-block;
+    width: 480px;
+    height: 180px;
+    z-index: 1;
+}
