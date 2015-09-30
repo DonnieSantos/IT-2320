@@ -1,0 +1,26 @@
+﻿.board
+{
+    display: table;
+    border: 1px solid black;
+}
+
+.board > .row
+{
+    display: table;
+}
+
+.board > .row > .cell
+{
+    width: 80px;
+    height: 80px;
+    border: 1px solid black;
+    display: inline-block;
+}
+
+.piece
+{
+    background-size: 75px 75px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-origin: content-box;
+}
