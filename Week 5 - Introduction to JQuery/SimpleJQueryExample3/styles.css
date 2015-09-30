@@ -1,0 +1,30 @@
+﻿.board
+{
+    display: table;
+    border: 1px solid black;
+}
+
+.board > .row
+{
+    display: table;
+}
+
+.board > .row > .cell
+{
+    width: 80px;
+    height: 80px;
+    border: 3px solid black;
+    display: inline-block;
+    font-size: 40px;
+    text-align: center;
+}
+
+.board > .row > .highlighted-cell
+{
+    width: 80px;
+    height: 80px;
+    border: 3px solid red;
+    display: inline-block;
+    font-size: 40px;
+    text-align: center;
+}
