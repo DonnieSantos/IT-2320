@@ -1,0 +1,25 @@
+﻿@model JavaScriptSerializer.Models.HomeModel
+
+<html>
+    <head>
+        <title>JSON Serialization</title>
+        <link href="~/Styles/Home.css" rel="stylesheet" />
+    </head>
+
+    <body>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="~/Scripts/Home.js"></script>
+
+        <div class="text">@Model.People[0].Name</div>
+
+        <div class="block-text">@Model.RawData</div>
+        
+        <div id="output"></div>
+
+        <script type="text/javascript">
+            Home.ProcessModel(@Html.Raw(@Model.RawData));
+        </script>
+
+    </body>
+
+</html>
