@@ -1,0 +1,25 @@
+﻿
+ The back-end resource you will be calling is:
+
+ 	Home/GetPlayerInformation
+
+ The JSON format of the request should be as follows:
+
+ 	{
+		'PlayerNumber' : 0
+	}
+
+ The JSON format of the response will be as follows:
+
+	{
+		'PlayerNumber' : 23
+		'PlayerName' : 'Lebron James'
+	}
+
+ There are three valid players in the database:
+
+ 	23 - Lebron James
+	 2 - Kyrie Irving
+ 	17 - Anderson Varejão
+
+ Any other PlayerNumber will result in 'Player Not Found'.
