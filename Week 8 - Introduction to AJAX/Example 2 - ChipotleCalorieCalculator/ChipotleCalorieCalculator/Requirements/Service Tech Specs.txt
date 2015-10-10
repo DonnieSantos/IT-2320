@@ -1,0 +1,52 @@
+ +------------------+---------------------------------------------------------+
+ | Service Name     | GetOrderDetails                                         |
+ +------------------+---------------------------------------------------------+
+ | Description                                                                |
+ |                                                                            |
+ | This service will return a JSON payload for a Chipotle order.              |
+ | The request will specify true or false for all 4 types of meat.            |
+ | The response will specify the calories of each item and total calories.    |
+ +----------------------------------------------------------------------------+
+ | Request Format (JSON)                                                      |
+ |                                                                            |
+ | {                                                                          |
+ |   "Chicken": true,                                                         |
+ |   "Carnitas": true,                                                        |
+ |   "Steak": false,                                                          |
+ |   "Barbacoa": false                                                        |
+ | }                                                                          |
+ +----------------------------------------------------------------------------+
+ | Request Format (Object)                                                    |
+ |                                                                            |
+ | request.Chicken = true;                                                    |
+ | request.Carnitas = true;                                                   |
+ | request.Steak = false;                                                     |
+ | request.Barbacoa = false;                                                  |
+ +----------------------------------------------------------------------------+
+ | Response Format (JSON)                                                     |
+ |                                                                            |
+ | {                                                                          |
+ |   "OrderDetails":                                                          |
+ |   [                                                                        |
+ |     {                                                                      |
+ |       "Name": "Chicken",                                                   |
+ |       "Calories": "180"                                                    |
+ |     },                                                                     |
+ |     {                                                                      |
+ |       "Name": "Carnitas",                                                  |
+ |       "Calories": "220"                                                    |
+ |     }                                                                      |
+ |   ],                                                                       |
+ |   "TotalCalories": 400,                                                    |
+ | }                                                                          |
+ +----------------------------------------------------------------------------+
+ | Response Format (Object)                                                   |
+ |                                                                            |
+ | response                                                                   |
+ | response.OrderDetails                                                      |
+ | response.OrderDetails[0].Name                                              |
+ | response.OrderDetails[0].Calories                                          |
+ | response.OrderDetails[1].Name                                              |
+ | response.OrderDetails[1].Calories                                          |
+ | response.TotalCalories                                                     |
+ +----------------------------------------------------------------------------+

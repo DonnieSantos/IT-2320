@@ -1,0 +1,34 @@
+ +------------------+
+ | Lab Instructions |
+ +------------------+
+
+ You have been provided a service that gives the individual item
+ calories and total calories of a simplified Chipotle order. The
+ goal of the assignment is to complete the Home.js script file
+ such that when you click the submit button, the service will be
+ called with a valid request, the response will be handled, and
+ the results within the reponse will be displayed to the user
+ within the content of the HTML.
+
+ Using JQuery, follow these steps:
+
+ 1.) Bind a function to the submit button click event.
+
+ 2.) When the click event fires, your function should
+     call the JQuery ajax function. This function takes
+     one object parameter which can be configured with
+     the settings of the service call.
+
+     http://api.jquery.com/jquery.ajax/#jQuery-ajax-settings
+
+     The three settings you will care about are:
+       url      -  The string URL of your service location
+       data     -  The service request object (JSON optional)
+       success  -  The service callback function
+
+ 3.) In the success callback function, parse through the
+     response object and display the individual values in
+     the HTML content for the user to view.
+
+	 Here's some example code in case you need syntax help:
+     https://github.com/DonnieSantos/webdev/tree/master/AJAXClientServer/Client

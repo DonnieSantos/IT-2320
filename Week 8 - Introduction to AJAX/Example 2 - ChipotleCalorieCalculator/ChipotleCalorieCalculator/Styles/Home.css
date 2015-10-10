@@ -1,0 +1,40 @@
+﻿.home .menu
+{
+    width: 175px;
+    border: 1px solid black;
+}
+
+.home .menu .row
+{
+    padding: 10px;
+}
+
+.home .menu .row .label
+{
+    width: 120px;
+    height: 20px;
+}
+
+.home .menu .row .label, .home .menu .row input
+{
+    display: inline-block;
+}
+
+.home .submit-button
+{
+    width: 95px;
+    height: 25px;
+    margin-top: 10px;
+    margin-left: 82px;
+}
+
+.home .results
+{
+    margin-top: 20px;
+}
+
+.home .results-total
+{
+    margin-top: 20px;
+    font-weight: bold;
+}
