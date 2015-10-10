@@ -12,7 +12,7 @@
  The JSON format of the response will be as follows:
 
 	{
-		'PlayerNumber' : 23
+		'PlayerNumber' : 23,
 		'PlayerName' : 'Lebron James'
 	}
 
