@@ -1,0 +1,35 @@
+.main-content
+{
+	width: 80%;
+	border: 1px solid black;
+}
+
+@media screen and (max-width: 320px)
+{
+	.main-content .text-label { display: block; }
+	.main-content .text-input { width: 100px;   }
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px)
+{
+	.main-content .text-label { display: block; }
+	.main-content .text-input { width: 200px;   }
+}
+
+@media screen and (min-width: 480px) and (max-width: 768px)
+{
+	.main-content .text-label { display: inline-block; }
+	.main-content .text-input { width: 300px;          }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px)
+{
+	.main-content .text-label { display: inline-block; }
+	.main-content .text-input { width: 400px;          }
+}
+
+@media screen and (min-width: 1025px)
+{
+	.main-content .text-label { display: inline-block; }
+	.main-content .text-input { width: 500px;          }
+}
