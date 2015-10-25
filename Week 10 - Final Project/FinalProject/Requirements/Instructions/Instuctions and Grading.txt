@@ -1,0 +1,39 @@
+
+ ITWM-2330 Course Project
+ Due Date: December 11th by Midnight
+
+ Description
+
+ You have been asked by Cuyahoga Community College to begin work on the front-end of a
+ new web site that will be used by Student Services to help students keep track of their
+ information. Another developer whom you do not know has already completed work on some
+ services on the back-end which you will be utilizing. The requirements for the new site
+ are still in a very early state, and so all Tri-C needs you to do at this point is get
+ the basics of a Login Screen and an Account Information Screen in place. Since end-state
+ requirements are not fully known, the immediate goal is to establish a foundation for the
+ system architecture, and get some good patterns and technical practices in place for the
+ coming work in the future. As such, the quality, readability and reusability of your code
+ is of the utmost importance; even more important than the details of the functionality.
+
+ Instructions
+
+ NOTE: All resources are in the "Requirements" directory of the FinalProject solution.
+
+ 1.) Carefully read the Design Document which was provided for you by the Project Architect.
+ 2.) Carefully read the Technical Specifications provided by the Back-End Developer.
+ 3.) Carefully examine the Mockup Images provided by the UX Designer.
+ 4.) Modify the "FinalProject" solution to develop the new Front-End according to requirements.
+
+ REMINDER: You only have to modify "Index.cshtml", "Home.js" and "Home.css".
+
+ Grading
+
+ Functionality of Interaction with Login Service                  [15 pts.]
+ Functionality of Interaction with Create Account Service         [15 pts.]
+ Functionality of Interaction with Account Information Service    [15 pts.]
+ Functionality of Interaction with Account Add/Update Service     [15 pts.]
+ Matches Responsive UX Requirements for Login Screen              [15 pts.]
+ Matches Responsive UX Requirements for Account Screen Desktop    [15 pts.]
+ Followed High-Level Design Document Specification                [10 pts.]
+
+ Total                                                            [100 pts.]

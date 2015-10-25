@@ -1,0 +1,181 @@
+
+  Final Project - Service Technical Specifications
+
+ +------------------+---------------------------------------------------------+
+ | Service Name     | CreateAccount                                           |
+ +------------------+---------------------------------------------------------+
+ | HTTP Request     | GET                                                     |
+ +------------------+---------------------------------------------------------+
+ | Inputs           | Username, Password, EmailAdd, EmailCon                  |
+ +------------------+---------------------------------------------------------+
+ | Possible Outputs | Message, Username, Password, EmailAdd, EmailCon         |
+ +------------------+---------------------------------------------------------+
+ | Errors                                                                     |
+ |                                                                            |
+ |     "Username" : "Invalid"   (Must be at least 6 characters)               |
+ |     "Username" : "Exists"    (Username is already taken)                   |
+ |     "Password" : "Invalid"   (Must be at least 6 characters)               |
+ |     "EmailAdd" : "Invalid"   (Must have a value and contain "@")           |
+ |     "EmailCon" : "Invalid"   (Must have a value)                           |
+ |     "EmailCon" : "Mismatch"  (Must match EmailAdd)                         |
+ |                                                                            |
+ +----------------------------------------------------------------------------+
+ | Description                                                                |
+ |                                                                            |
+ | This service will create a new uniquely-named user account.                |
+ | If the account is created, the service will return a Message of "Success". |
+ | In the case of "Success", all other response data can be ignored.          |
+ | If the account creation fails, there will be a Message of "Error".         |
+ | In the case of an error, examine the values of the other 4 outputs.        |
+ | Those values will indicate the nature of the error.                        |
+ +----------------------------------------------------------------------------+
+ | Request Format                                                             |
+ |                                                                            |
+ | {                                                                          |
+ |     "Username": "",                                                        |
+ |     "Password": "",                                                        |
+ |     "EmailAdd": "",                                                        |
+ |     "EmailCon": ""                                                         |
+ | }                                                                          |
+ +----------------------------------------------------------------------------+
+ | Response Format                                                            |
+ |                                                                            |
+ | {                                                                          |
+ |     "Message": "",                                                         |
+ |     "Username": "",                                                        |
+ |     "Password": "",                                                        |
+ |     "EmailAdd": "",                                                        |
+ |     "EmailCon": ""                                                         |
+ | }                                                                          |
+ +----------------------------------------------------------------------------+
+
+
+ +------------------+---------------------------------------------------------+
+ | Service Name     | Login                                                   |
+ +------------------+---------------------------------------------------------+
+ | HTTP Request     | GET                                                     |
+ +------------------+---------------------------------------------------------+
+ | Inputs           | Username, Password                                      |
+ +------------------+---------------------------------------------------------+
+ | Possible Outputs | Message, Username, Password                             |
+ +------------------+---------------------------------------------------------+
+ | Errors                                                                     |
+ |                                                                            |
+ |     "Username" : "Invalid"   (Must be an existing account username)        |
+ |     "Password" : "Wrong"     (Wrong password for existing account)         |
+ |                                                                            |
+ +----------------------------------------------------------------------------+
+ | Description                                                                |
+ |                                                                            |
+ | This service will verify your username and password match your account.    |
+ | If they match, the service will return a Message of "Success".             |
+ | In the case of "Success", all other response data can be ignored.          |
+ | If the call fails, there will be a Message of "Error".                     |
+ | In the case of an error, examine the values of both outputs.               |
+ | Those values will indicate the nature of the error.                        |
+ +----------------------------------------------------------------------------+
+ | Request Format                                                             |
+ |                                                                            |
+ | {                                                                          |
+ |     "Username": "",                                                        |
+ |     "Password": ""                                                         |
+ | }                                                                          |
+ +----------------------------------------------------------------------------+
+ | Response Format                                                            |
+ |                                                                            |
+ | {                                                                          |
+ |     "Message": "",                                                         |
+ |     "Username": "",                                                        |
+ |     "Password": ""                                                         |
+ | }                                                                          |
+ +----------------------------------------------------------------------------+
+
+
+ +------------------+---------------------------------------------------------+
+ | Service Name     | GetAccountInformation                                   |
+ +------------------+---------------------------------------------------------+
+ | HTTP Request     | GET                                                     |
+ +------------------+---------------------------------------------------------+
+ | Inputs           | Username                                                |
+ +------------------+---------------------------------------------------------+
+ | Possible Outputs | Error, Message, Payload                                 |
+ +------------------+---------------------------------------------------------+
+ | Errors           | Username Does Not Exist                                 |
+ +------------------+---------------------------------------------------------+
+ | Description                                                                |
+ |                                                                            |
+ | This service will return a JSON payload for a single user account.         |
+ | If any error exists, "Error" will be populated with a message.             |
+ | If there are no errors, "Message" should have a value of "Success".        |
+ | The "Payload" should contain all of the user's account information.        |
+ +----------------------------------------------------------------------------+
+ | Request Format                                                             |
+ |                                                                            |
+ | {                                                                          |
+ |     "Username": ""                                                         |
+ | }                                                                          |
+ +----------------------------------------------------------------------------+
+ | Response Format                                                            |
+ |                                                                            |
+ | {                                                                          |
+ |     "Message": "",                                                         |
+ |     "Payload":                                                             |
+ |     {                                                                      |
+ |         "account":                                                         |
+ |         {                                                                  |
+ |             "username": "",                                                |
+ |             "password": "",                                                |
+ |             "emailadd": ""                                                 |
+ |         }                                                                  |
+ |     }                                                                      |
+ | }                                                                          |
+ +----------------------------------------------------------------------------+
+
+
+ +------------------+---------------------------------------------------------+
+ | Service Name     | AddOrUpdateElement                                      |
+ +------------------+---------------------------------------------------------+
+ | HTTP Request     | GET                                                     |
+ +------------------+---------------------------------------------------------+
+ | Inputs           | Username, ElementName, ElementValue                     |
+ +------------------+---------------------------------------------------------+
+ | Possible Outputs | Error, Message, Payload                                 |
+ +------------------+---------------------------------------------------------+
+ | Errors                                                                     |
+ |                                                                            |
+ |     Username Does Not Exist                                                |
+ |     Element Name Contains Spaces                                           |
+ |     Cannot Change Username                                                 |
+ +------------------+---------------------------------------------------------+
+ | Description                                                                |
+ |                                                                            |
+ | This service will update the value of any element of a user account.       |
+ | If that element does not exist, it will be added to the user account.      |
+ | This service will return a JSON payload for a single user account.         |
+ | If any error exists, "Error" will be populated with a message.             |
+ | If there are no errors, "Message" should have a value of "Success".        |
+ | The "Payload" should contain all of the user's account information.        |
+ +----------------------------------------------------------------------------+
+ | Request Format                                                             |
+ |                                                                            |
+ | {                                                                          |
+ |     "Username": "",                                                        |
+ |     "ElementName": "",                                                     |
+ |     "ElementValue": ""                                                     |
+ | }                                                                          |
+ +----------------------------------------------------------------------------+
+ | Response Format                                                            |
+ |                                                                            |
+ | {                                                                          |
+ |     "Message": "",                                                         |
+ |     "Payload":                                                             |
+ |     {                                                                      |
+ |         "account":                                                         |
+ |         {                                                                  |
+ |             "username": "",                                                |
+ |             "password": "",                                                |
+ |             "emailadd": ""                                                 |
+ |         }                                                                  |
+ |     }                                                                      |
+ | }                                                                          |
+ +----------------------------------------------------------------------------+
