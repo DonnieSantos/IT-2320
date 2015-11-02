@@ -1,0 +1,15 @@
+﻿.text
+{
+    display: inline-block;
+    font-family: Calibri;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.block-text
+{
+    display: block;
+    font-family: 'Courier New';
+    font-size: 20px;
+    padding: 20px;
+}
