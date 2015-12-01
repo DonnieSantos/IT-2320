@@ -1,0 +1,56 @@
+<html>
+
+	<head>
+		<title>AngularJS</title>
+		<link rel="stylesheet" type="text/css" href="styles.css">
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+		<script src="scripts.js"></script>
+	</head>
+
+	<body>
+		<div ng-app="" ng-controller="personController">
+
+			<h1>Introduction To AngularJS</h1>
+
+			<div class="divider"></div>
+
+			<h3>Basic Data Binding</h3>
+		 	<div>Username</div>
+			<input type="text" ng-model="username" />
+		 	<div class="username" ng-bind="username"></div>
+
+			<div class="divider"></div>
+
+			<h3>Using Controllers</h3>
+			<div>The Current Time Is: {{viewModel.currentTime}}</div>
+
+			<div class="divider"></div>
+
+			<h3>Combination of Controller and Data Binding</h3>
+			<div>First Name:<div>
+			<input class="text-input" type="text" ng-model="viewModel.firstName">
+			<div>Last Name:<div>
+			<input class="text-input" type="text" ng-model="viewModel.lastName">
+			<div>{{viewModel.firstName + " " + viewModel.lastName}}</div>
+
+			<div class="divider"></div>
+
+			<h3>Controller Methods</h3>
+			<div>The sum of 2 and 3 is: {{viewModel.Add(2,3)}}</div>
+
+			<div class="divider"></div>
+
+			<h3>Repeat Directive</h3>
+			<div ng-repeat="item in viewModel.list">{{item.name + " " + item.value}}</div>
+
+			<div class="divider"></div>
+
+			<h3>Filters</h3>
+			<div ng-repeat="item in viewModel.list | orderBy:'name'">{{item.name + " " + item.value | lowercase}}</div>
+
+			<div class="divider"></div>
+		</div>
+
+	</body>
+
+</html>
