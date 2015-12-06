@@ -26,6 +26,7 @@
     <UpgradeBackupLocation>
     </UpgradeBackupLocation>
     <OldToolsVersion>4.0</OldToolsVersion>
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -123,6 +124,7 @@
     <Content Include="Global.asax" />
     <Content Include="Scripts\Angular.js" />
     <Content Include="Scripts\Home.js" />
+    <Content Include="Scripts\JQuery.js" />
     <Content Include="Styles\Home.css" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">

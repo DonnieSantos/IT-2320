@@ -6,15 +6,19 @@
     </head>
 
     <body>
-
+        <script src="~/Scripts/JQuery.js"></script>
         <script src="~/Scripts/Angular.js"></script>
         <script src="~/Scripts/Home.js"></script>
-        
-        <div class="home">
 
-            <div>Hello World</div>
+        <div>before</div>
 
+        <input class="myButton" value="Click Me" type="button" />
+
+        <div ng-app="" ng-controller="myController">
+            <div ng-repeat="guy in battingOrder">{{guy.FirstName + " " + guy.LastName}}</div>
         </div>
+
+        <div>after</div>
 
     </body>
 
