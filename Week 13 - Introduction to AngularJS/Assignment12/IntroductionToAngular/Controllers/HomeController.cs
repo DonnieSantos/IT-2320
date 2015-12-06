@@ -1,8 +1,5 @@
 ﻿using System.Web.Mvc;
 using IntroductionToAngular.Extensions;
-using System.Xml.Linq;
-using System.Xml;
-using Newtonsoft.Json;
 using System.Collections.Generic;
 
 namespace IntroductionToAngular.Controllers
@@ -23,21 +20,19 @@ namespace IntroductionToAngular.Controllers
         [HttpGet]
         public JsonResult GetBattingOrder()
         {
-            var data = new List<object>();
-
-            data.Add(new { FirstName = "Kenny", LastName = "Lofton" });
-            data.Add(new { FirstName = "Omar", LastName = "Vizquel" });
-            data.Add(new { FirstName = "Carlos", LastName = "Baerga" });
-            data.Add(new { FirstName = "Albert", LastName = "Belle" });
-            data.Add(new { FirstName = "Eddie", LastName = "Murray" });
-            data.Add(new { FirstName = "Jim", LastName = "Thome" });
-            data.Add(new { FirstName = "Manny", LastName = "Ramirez" });
-            data.Add(new { FirstName = "Paul", LastName = "Sorrento" });
-            data.Add(new { FirstName = "Sandy", LastName = "Alomar" });
-
             return new JsonResult().SerializeObject(new
             {
-                BattingOrder = data
+                BattingOrder = new[] {
+                    new { FirstName = "Kenny" , LastName = "Lofton" },
+                    new { FirstName = "Omar" , LastName = "Vizquel" },
+                    new { FirstName = "Carlos" , LastName = "Baerga" },
+                    new { FirstName = "Albert" , LastName = "Belle" },
+                    new { FirstName = "Eddie" , LastName = "Murray" },
+                    new { FirstName = "Jim" , LastName = "Thome" },
+                    new { FirstName = "Manny" , LastName = "Ramirez" },
+                    new { FirstName = "Paul" , LastName = "Sorrento" },
+                    new { FirstName = "Sandy" , LastName = "Alomar" }
+                }
             });
         }
 

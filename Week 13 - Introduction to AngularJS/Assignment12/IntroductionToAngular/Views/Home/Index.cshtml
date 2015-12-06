@@ -2,23 +2,16 @@
 
     <head>
         <link href="~/Styles/Home.css" rel="stylesheet" />
+        <script data-require="angular.js@1.4.8" data-semver="1.4.8" src="https://code.angularjs.org/1.4.8/angular.js"></script>
+        <script src="~/Scripts/Home.js"></script>
         <title>Introduction to AngularJS</title>
     </head>
 
-    <body>
-        <script src="~/Scripts/JQuery.js"></script>
-        <script src="~/Scripts/Angular.js"></script>
-        <script src="~/Scripts/Home.js"></script>
+    <body ng-app="my-module" ng-controller="my-root-controller">
 
-        <div>before</div>
-
-        <input class="myButton" value="Click Me" type="button" />
-
-        <div ng-app="" ng-controller="myController">
-            <div ng-repeat="guy in battingOrder">{{guy.FirstName + " " + guy.LastName}}</div>
+        <div ng-repeat="player in players">
+            <div>{{player.FirstName}} {{player.LastName}}</div>
         </div>
-
-        <div>after</div>
 
     </body>
 
