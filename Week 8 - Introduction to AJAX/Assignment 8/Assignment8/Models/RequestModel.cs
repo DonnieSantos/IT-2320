@@ -2,6 +2,6 @@
 {
     public class RequestModel
     {
-        public int PlayerNumber;
+        public int PlayerNumber { get; set; }
     }
 }
