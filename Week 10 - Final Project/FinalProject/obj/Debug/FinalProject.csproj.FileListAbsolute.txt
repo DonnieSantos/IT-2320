@@ -33,3 +33,5 @@ C:\Users\Donal\Desktop\IT-2320\Week 10 - Final Project\FinalProject\bin\System.W
 C:\Users\Donal\Desktop\IT-2320\Week 10 - Final Project\FinalProject\obj\Debug\FinalProject.csprojResolveAssemblyReference.cache
 C:\Users\Donal\Desktop\IT-2320\Week 10 - Final Project\FinalProject\obj\Debug\FinalProject.dll
 C:\Users\Donal\Desktop\IT-2320\Week 10 - Final Project\FinalProject\obj\Debug\FinalProject.pdb
+C:\Users\Donal\Desktop\IT-2320\Week 10 - Final Project\FinalProject\bin\Newtonsoft.Json.dll
+C:\Users\Donal\Desktop\IT-2320\Week 10 - Final Project\FinalProject\bin\Newtonsoft.Json.xml
